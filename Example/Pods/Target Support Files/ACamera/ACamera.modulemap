@@ -1,0 +1,6 @@
+framework module ACamera {
+  umbrella header "ACamera-umbrella.h"
+
+  export *
+  module * { export * }
+}

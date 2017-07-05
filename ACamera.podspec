@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'ACamera'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of ACamera.'
+  s.summary          = 'ACamera'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,14 +18,14 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+  ACamera
                        DESC
 
-  s.homepage         = 'https://github.com/RogerAbyss/ACamera'
+  s.homepage         = 'http://git.oschina.net/abyssroger/acamera'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'RogerAbyss' => 'roger_ren@qq.com' }
-  s.source           = { :git => 'https://github.com/RogerAbyss/ACamera.git', :tag => s.version.to_s }
+  s.source           = { :git => 'git@git.oschina.net:abyssroger/acamera.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'

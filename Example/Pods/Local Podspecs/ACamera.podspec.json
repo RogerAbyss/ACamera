@@ -1,0 +1,22 @@
+{
+  "name": "ACamera",
+  "version": "0.1.0",
+  "summary": "A short description of ACamera.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/RogerAbyss/ACamera",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "RogerAbyss": "roger_ren@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/RogerAbyss/ACamera.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "ACamera/Classes/**/*"
+}

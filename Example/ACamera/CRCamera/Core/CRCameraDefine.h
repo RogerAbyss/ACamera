@@ -1,0 +1,26 @@
+//
+//  CRCameraDefine.h
+//  CRPhotoDocker
+//
+//  Created by Abyss on 2017/6/23.
+//  Copyright © 2017年 Abyss. All rights reserved.
+//
+
+#ifndef CRCameraDefine_h
+#define CRCameraDefine_h
+
+@class CRCameraScanObjct;
+typedef NS_ENUM(NSInteger, CRCameraStyle)
+{
+    CRCameraStyleUnknow = -1,
+    CRCameraStyleNormal = 0,
+    
+    CRCameraStyleCode,
+    
+    CRCameraStyleBankCard,
+    CRCameraStyleIDCard,
+};
+
+typedef void(^GrebInfo)(CRCameraScanObjct* info);
+
+#endif /* CRCameraDefine_h */
