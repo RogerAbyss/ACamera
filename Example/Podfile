@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'ACamera_Example' do
+  pod 'ACamera', :path => '../'
+
+  target 'ACamera_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase'
+  end
+end
