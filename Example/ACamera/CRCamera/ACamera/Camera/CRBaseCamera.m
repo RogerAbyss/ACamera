@@ -18,12 +18,12 @@
 
 #pragma mark - INIT
 
-+ (instancetype)cameraWithStyle:(CRCameraStyle)style
++ (instancetype)cameraWithStyle:(CRCameraDetetorType)style
 {
     return [[self alloc] initWithCameraStyle:style];
 }
 
-- (instancetype)initWithCameraStyle:(CRCameraStyle)style
+- (instancetype)initWithCameraStyle:(CRCameraDetetorType)style
 {
     self = [super init];
     if(self)
@@ -76,7 +76,7 @@
 {
     if (!_output)
     {
-        if (_style == CRCameraStyleCode)
+        if (_style == CRCameraDetetorTypeCode)
         {
             _output = [[AVCaptureMetadataOutput alloc] init];
         }
@@ -184,7 +184,7 @@
     {
         [self.session addOutput:self.output];
         
-        if (self.style == CRCameraStyleCode)
+        if (self.style == CRCameraDetetorTypeCode)
         {
             [((AVCaptureMetadataOutput *)self.output) setMetadataObjectsDelegate:self queue:_queue];
             ((AVCaptureMetadataOutput *)self.output).metadataObjectTypes = @[AVMetadataObjectTypeQRCode];
@@ -292,7 +292,7 @@
 
         CRCameraScanObjct *model = [CRCameraScanObjct new];
         model.codeString = obj.stringValue;
-        model.style = CRCameraStyleCode;
+        model.style = CRCameraDetetorTypeCode;
         
         self.greb(model);
     }

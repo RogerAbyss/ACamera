@@ -34,17 +34,17 @@
         {
             switch (self.camera.style)
             {
-                case CRCameraStyleBankCard:
+                case CRCameraDetetorTypeBankCard:
                 {
                     [self parseBankImageBuffer:imageBuffer];
                 }
                     break;
-                case CRCameraStyleIDCard:
+                case CRCameraDetetorTypeIDCard:
                 {
                     [self parseIDCardImageBuffer:imageBuffer];
                 }
                     break;
-                case CRCameraStyleCode:
+                case CRCameraDetetorTypeCode:
                 {
                     // 使用CIDetector 处理buffer方式识别
                     // CIDetector锁死buffer造成内存无法释放, 系统问题

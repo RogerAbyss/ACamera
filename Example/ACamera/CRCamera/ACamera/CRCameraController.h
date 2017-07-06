@@ -14,7 +14,7 @@
 @property (nonatomic, strong) CRBaseCamera* camera;
 
 + (instancetype)cameraDisplayInController:(UIViewController *)controller
-                                    style:(CRCameraStyle)style
+                                    style:(CRCameraDetetorType)style
                                     cover:(UIView *)cover
                                      greb:(GrebInfo)grab;
 - (void)dismiss;

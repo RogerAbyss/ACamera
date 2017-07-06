@@ -2,10 +2,10 @@
 
 @interface CRBaseCamera : NSObject <CRBaseCameraControl>
 
-@property (nonatomic, assign) CRCameraStyle style;
+@property (nonatomic, assign) CRCameraDetetorType style;
 @property (nonatomic, copy) GrebInfo greb;
 
-+ (instancetype)cameraWithStyle:(CRCameraStyle)style;
++ (instancetype)cameraWithStyle:(CRCameraDetetorType)style;
 
 /** 运行 */
 - (void)runningInQueue:(dispatch_queue_t)queue;

@@ -24,7 +24,7 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
         _controller = [CRCameraController cameraDisplayInController:self
-                                                              style:CRCameraStyleCode
+                                                              style:CRCameraDetetorTypeCode
                                                               cover:[ScanOverlay cover]
                                                                greb:^(CRCameraScanObjct* info){
                                                                    NSLog(@"%@",info);

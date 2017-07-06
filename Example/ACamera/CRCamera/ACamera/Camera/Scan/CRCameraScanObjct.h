@@ -12,7 +12,7 @@
 
 @interface CRCameraScanObjct : NSObject
 
-@property (nonatomic, assign) CRCameraStyle style;
+@property (nonatomic, assign) CRCameraDetetorType style;
 @property (nonatomic, assign, readonly) BOOL success;
 
 - (NSString *)description;

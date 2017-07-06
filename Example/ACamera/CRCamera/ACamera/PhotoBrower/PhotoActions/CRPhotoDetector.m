@@ -52,7 +52,7 @@
         int i = 0;
         
         idInfo = [CRCameraScanObjct new];
-        idInfo.style = CRCameraStyleIDCard;
+        idInfo.style = CRCameraDetetorTypeIDCard;
         ctype = pResult[i++];
         idInfo.type = ctype;
         while(i < ret){
@@ -188,7 +188,7 @@
                 AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
             });
             
-            model.style = CRCameraStyleBankCard;
+            model.style = CRCameraDetetorTypeBankCard;
             return model;
         }
     }
@@ -230,7 +230,7 @@
                         AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
                     });
                     
-                    model.style = CRCameraStyleCode;
+                    model.style = CRCameraDetetorTypeCode;
                     return model;
                 }
     

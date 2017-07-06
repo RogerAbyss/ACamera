@@ -10,21 +10,21 @@
 
 @implementation CRCameraScanObjct
 
-- (CRCameraStyle)style
+- (CRCameraDetetorType)style
 {
-    int code = CRCameraStyleUnknow;
+    int code = CRCameraDetetorTypeUnknow;
     
     if (_bankNumber)
     {
-        code = CRCameraStyleBankCard;
+        code = CRCameraDetetorTypeBankCard;
     }
     else if (_code || _valid)
     {
-        code = CRCameraStyleIDCard;
+        code = CRCameraDetetorTypeIDCard;
     }
     else if (_codeString)
     {
-        code = CRCameraStyleCode;
+        code = CRCameraDetetorTypeCode;
     }
     
     return code;
@@ -34,17 +34,17 @@
 {
     switch (self.style)
     {
-        case CRCameraStyleUnknow:
+        case CRCameraDetetorTypeUnknow:
         {
             return NO;
         }
             break;
-        case CRCameraStyleCode:
+        case CRCameraDetetorTypeCode:
         {
             return (_codeString&&_codeString.length>0);
         }
             break;
-        case CRCameraStyleIDCard:
+        case CRCameraDetetorTypeIDCard:
         {
             if (_code !=nil && _name!=nil && _gender!=nil && _nation!=nil && _address!=nil)
             {
@@ -64,7 +64,7 @@
             return NO;
         }
             break;
-        case CRCameraStyleBankCard:
+        case CRCameraDetetorTypeBankCard:
         {
             return (_bankNumber&&_bankName);
         }
@@ -82,23 +82,23 @@
     
     switch (self.style)
     {
-        case CRCameraStyleUnknow:
+        case CRCameraDetetorTypeUnknow:
         {
         }
             break;
-        case CRCameraStyleCode:
+        case CRCameraDetetorTypeCode:
         {
             des = [NSString stringWithFormat:@"结果:%@\n",
                    _codeString];
         }
             break;
-        case CRCameraStyleIDCard:
+        case CRCameraDetetorTypeIDCard:
         {
             des = [NSString stringWithFormat:@"身份证号:%@\n姓名:%@\n性别:%@\n民族:%@\n地址:%@\n签发机关:%@\n有效期:%@",
                    _code, _name, _gender, _nation, _address, _issue, _valid];
         }
             break;
-        case CRCameraStyleBankCard:
+        case CRCameraDetetorTypeBankCard:
         {
             des = [NSString stringWithFormat:@"银行卡号:%@\n银行名称:%@\n银行图片:%@\n",
                    _bankNumber, _bankName, _bankImage];

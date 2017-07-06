@@ -10,15 +10,15 @@
 #define CRCameraDefine_h
 
 @class CRCameraScanObjct;
-typedef NS_ENUM(NSInteger, CRCameraStyle)
+typedef NS_ENUM(NSInteger, CRCameraDetetorType)
 {
-    CRCameraStyleUnknow = -1,
-    CRCameraStyleNormal = 0,
+    CRCameraDetetorTypeUnknow = -1,
+    CRCameraDetetorTypeNormal = 0,
     
-    CRCameraStyleCode,
+    CRCameraDetetorTypeCode,
     
-    CRCameraStyleBankCard,
-    CRCameraStyleIDCard,
+    CRCameraDetetorTypeBankCard,
+    CRCameraDetetorTypeIDCard,
 };
 
 typedef void(^GrebInfo)(CRCameraScanObjct* info);
