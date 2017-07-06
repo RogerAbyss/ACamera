@@ -10,6 +10,7 @@
 #import "CRCameraOutputBuffReciver.h"
 
 @interface CRCameraController () <AVCaptureVideoDataOutputSampleBufferDelegate>
+@property (nonatomic, weak) UINavigationController* father_nav;
 @property (nonatomic, strong) CRCameraOutputBuffReciver* reciver;
 @property (nonatomic, strong) dispatch_queue_t queue;
 @end
@@ -56,15 +57,43 @@
     return _camera;
 }
 
-+ (instancetype)cameraDisplayInController:(UIViewController *)controller style:(CRCameraStyle)style layer:(UIView *)layer
++ (instancetype)cameraDisplayInController:(UIViewController *)controller
+                                    style:(CRCameraStyle)style
+                                    cover:(UIView *)cover
+                                     greb:(GrebInfo)grab
 {
+    if(![CRCameraController getAVAuthorizationStatus]) return nil;
+    
     CRCameraController* cameraController = [[CRCameraController alloc] init];
     cameraController.camera = [CRBaseCamera cameraWithStyle:style];
+    cameraController.camera.greb = grab;
 
     [controller presentViewController:cameraController animated:YES completion:NULL];
-    [cameraController.view addSubview:layer];
+    [cameraController.view addSubview:cover];
+    
+    cameraController.father_nav = controller.navigationController;
     
     return cameraController;
+}
+
++ (BOOL)getAVAuthorizationStatus
+{
+    NSString *mediaType = AVMediaTypeVideo;
+    
+    AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:mediaType];
+    
+    if(authStatus == AVAuthorizationStatusRestricted || authStatus == AVAuthorizationStatusDenied)
+    {
+#warning TODO:AVAuthorizationStatus
+        return NO;
+    }
+    
+    return YES;
+}
+
+- (void)dismiss
+{
+    [_father_nav dismissViewControllerAnimated:YES completion:NULL];
 }
 
 @end

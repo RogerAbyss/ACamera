@@ -72,17 +72,24 @@
     return _device;
 }
 
-- (AVCaptureVideoDataOutput *)output
+- (AVCaptureOutput *)output
 {
     if (!_output)
     {
-        _output = [[AVCaptureVideoDataOutput alloc] init];
-        
-        _output.alwaysDiscardsLateVideoFrames = YES;
-        _output.videoSettings = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange], (id)kCVPixelBufferPixelFormatTypeKey, nil];
+        if (_style == CRCameraStyleCode)
+        {
+            _output = [[AVCaptureMetadataOutput alloc] init];
+        }
+        else
+        {
+            _output = [[AVCaptureVideoDataOutput alloc] init];
+            
+            ((AVCaptureVideoDataOutput *)_output).alwaysDiscardsLateVideoFrames = YES;
+            ((AVCaptureVideoDataOutput *)_output).videoSettings = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange], (id)kCVPixelBufferPixelFormatTypeKey, nil];
+        }
     }
     
-    return _output;
+    return ((AVCaptureOutput *)_output);
 }
 
 - (CRCameraOutputBuffReciver *)reciver
@@ -173,11 +180,19 @@
 
 - (BOOL)configureOutput
 {
-    [self.output setSampleBufferDelegate:self queue:_queue];
-    
     if ([self.session canAddOutput:self.output])
     {
         [self.session addOutput:self.output];
+        
+        if (self.style == CRCameraStyleCode)
+        {
+            [((AVCaptureMetadataOutput *)self.output) setMetadataObjectsDelegate:self queue:_queue];
+            ((AVCaptureMetadataOutput *)self.output).metadataObjectTypes = @[AVMetadataObjectTypeQRCode];
+        }
+        else
+        {
+            [((AVCaptureVideoDataOutput *)self.output) setSampleBufferDelegate:self queue:_queue];
+        }
         
         return YES;
     }
@@ -267,5 +282,19 @@
         [self.session addOutput:self.output];
 }
 
+- (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection
+{
+    [self stopSession];
+    
+    if (metadataObjects.count > 0)
+    {
+        AVMetadataMachineReadableCodeObject *obj = metadataObjects[0];
+
+        CRCameraScanObjct *model = [CRCameraScanObjct new];
+        model.codeString = obj.stringValue;
+        
+        self.greb(model);
+    }
+}
 
 @end

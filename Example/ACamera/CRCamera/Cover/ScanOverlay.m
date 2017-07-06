@@ -1,28 +1,56 @@
-//
-//  OverlayView.m
-//  BankCard
-//
-//  Created by XAYQ-FanXL on 16/7/8.
-//  Copyright © 2016年 AN. All rights reserved.
-//
 
-#import "OverlayView.h"
+#import "ScanOverlay.h"
 #import "RectManager.h"
 
-@interface OverlayView()
+@interface ScanOverlay()
+
+@property (nonatomic, assign) CGFloat r;
+@property (nonatomic, assign) CGFloat g;
+@property (nonatomic, assign) CGFloat b;
+
+@property (nonatomic, assign) CGFloat alpha;
+@property (nonatomic, copy) NSString* txt;
 
 @property (nonatomic, assign) int lineLenght;
 @property (nonatomic, strong) NSTimer *timer;
+@property (nonatomic, strong) UILabel* label;
 
 @end
 
-@implementation OverlayView
+@implementation ScanOverlay
+
++ (instancetype)cover
+{
+    return [ScanOverlay coverWith:@"放入你的文字" r:248 g:62 b:75 alpha:0.8];
+}
+
++ (instancetype)coverWith:(NSString *)txt r:(CGFloat)r g:(CGFloat)g b:(CGFloat)b alpha:(CGFloat)alpha
+{
+    CGRect rect = [ScanOverlay getOverlayFrame:[UIScreen mainScreen].bounds];
+    ScanOverlay* cover = [[ScanOverlay alloc] initWithFrame:rect];
+    
+    cover.r = r;
+    cover.g = g;
+    cover.b = b;
+    
+    cover.alpha = alpha;
+    
+    cover.txt = txt;
+    
+    return cover;
+}
+
+- (void)setTxt:(NSString *)txt
+{
+    _txt = txt;
+    
+    self.label.text = _txt?:@"";
+}
 
 - (NSTimer *)timer
 {
-    if (_timer) {
+    if (!_timer)
         _timer = [NSTimer scheduledTimerWithTimeInterval:.02 target:self selector:@selector(timerFire:) userInfo:nil repeats:YES];
-    }
     
     return _timer;
 }
@@ -40,20 +68,21 @@
 
         [self.timer fire];
         
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, width, height)];
-        label.backgroundColor = [UIColor clearColor];
-        label.textAlignment = NSTextAlignmentCenter;
-        label.textColor = [UIColor lightGrayColor];
-        label.font = [UIFont boldSystemFontOfSize:20];
-        label.text = @"请将扫描线对准身份证并对齐左右边缘。";
-        [self addSubview:label];
+        _label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, width, height)];
+        _label.backgroundColor = [UIColor clearColor];
+        _label.textAlignment = NSTextAlignmentCenter;
+        _label.textColor = [UIColor lightGrayColor];
+        _label.font = [UIFont boldSystemFontOfSize:20];
+        _label.text = @"";
+        _label.numberOfLines = 0;
+        [self addSubview:_label];
         
         CGAffineTransform transform = CGAffineTransformMakeRotation((90.0f * M_PI) / 180.0f);
-        label.transform = transform;
+        _label.transform = transform;
         
         float x = height * 22 / 54;
         x = x + (height - x) / 2;
-        label.center = CGPointMake(x, width/2);
+        _label.center = CGPointMake(x, width/2);
     }
     return self;
 }
@@ -74,7 +103,7 @@
 {
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSetLineWidth(context, 8.0);
-    CGContextSetRGBStrokeColor(context, .3, 0.8, .3, .8);
+    CGContextSetRGBStrokeColor(context, _r/255.0, _g/255.0, _b/255.0, _alpha);
     
     CGContextBeginPath(context);
     

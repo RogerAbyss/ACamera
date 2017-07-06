@@ -8,9 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class CRCameraScanObjct;
 @interface UIImage (Extend)
 
 + (UIImage *)getImageStream:(CVImageBufferRef)imageBuffer;
 + (UIImage *)getSubImage:(CGRect)rect inImage:(UIImage*)image;
+
+- (CRCameraScanObjct *)getIDCard;
+- (CRCameraScanObjct *)getBankCard;
+- (CRCameraScanObjct *)getQRCode;
 
 @end

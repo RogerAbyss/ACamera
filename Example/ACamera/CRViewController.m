@@ -9,7 +9,7 @@
 #import "CRViewController.h"
 #import "CRCameraController.h"
 
-#import "OverlayView.h"
+#import "ScanOverlay.h"
 
 @interface CRViewController ()
 @property (nonatomic, strong) CRCameraController* controller;
@@ -21,13 +21,17 @@
 {
     [super viewDidLoad];
 
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        _controller = [CRCameraController cameraDisplayInController:self
+                                                              style:CRCameraStyleCode
+                                                              cover:[ScanOverlay cover]
+                                                               greb:^(CRCameraScanObjct* info){
+                                                                   
+                                                                   NSLog(@"%@",info);}];
+        [_controller dismiss];
+    });
     
-    CGRect rect = [OverlayView getOverlayFrame:[UIScreen mainScreen].bounds];
-    OverlayView* overlayView = [[OverlayView alloc] initWithFrame:rect];
-    
-    _controller = [CRCameraController cameraDisplayInController:self style:CRCameraStyleIDCard layer:overlayView];
-    
-    _controller.camera.greb = ^(CRCameraScanObjct* info){ NSLog(@"%@",info);};
 }
 
 - (void)didReceiveMemoryWarning

@@ -22,7 +22,10 @@
 /** 输入流 */
 @property (nonatomic, strong) AVCaptureDeviceInput* input;
 /** 输出流 */
-@property (nonatomic, strong) AVCaptureVideoDataOutput* output;
+/** AVCaptureVideoDataOutput
+    AVCaptureMetadataOutput
+ */
+@property (nonatomic, strong) AVCaptureOutput* output;
 
 /** 预览的Layer */
 @property (nonatomic, strong) AVCaptureVideoPreviewLayer* previewLayer;

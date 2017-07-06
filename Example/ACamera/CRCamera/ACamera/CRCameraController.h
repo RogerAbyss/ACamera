@@ -13,6 +13,10 @@
 
 @property (nonatomic, strong) CRBaseCamera* camera;
 
-+ (instancetype)cameraDisplayInController:(UIViewController *)controller style:(CRCameraStyle)style layer:(CALayer *)layer;
++ (instancetype)cameraDisplayInController:(UIViewController *)controller
+                                    style:(CRCameraStyle)style
+                                    cover:(UIView *)cover
+                                     greb:(GrebInfo)grab;
+- (void)dismiss;
 
 @end
