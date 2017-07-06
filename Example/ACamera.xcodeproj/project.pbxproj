@@ -21,17 +21,16 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
-		6836A24B1F0B3D8700E8F462 /* libbankcard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6836A22F1F0B3D8700E8F462 /* libbankcard.a */; };
-		6836A24C1F0B3D8700E8F462 /* CRBaseCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 6836A2321F0B3D8700E8F462 /* CRBaseCamera.m */; };
-		6836A24D1F0B3D8700E8F462 /* CRCameraScanObjct.m in Sources */ = {isa = PBXBuildFile; fileRef = 6836A2361F0B3D8700E8F462 /* CRCameraScanObjct.m */; };
-		6836A24E1F0B3D8700E8F462 /* CRCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6836A2381F0B3D8700E8F462 /* CRCameraController.m */; };
-		6836A24F1F0B3D8700E8F462 /* OverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6836A23B1F0B3D8700E8F462 /* OverlayView.m */; };
-		6836A2501F0B3D8700E8F462 /* zocr0.lib in Resources */ = {isa = PBXBuildFile; fileRef = 6836A23F1F0B3D8700E8F462 /* zocr0.lib */; };
-		6836A2511F0B3D8700E8F462 /* libexidcardios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6836A2411F0B3D8700E8F462 /* libexidcardios.a */; };
-		6836A2521F0B3D8700E8F462 /* BankCardSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 6836A2441F0B3D8700E8F462 /* BankCardSearch.m */; };
-		6836A2531F0B3D8700E8F462 /* CRCameraOutputBuffReciver.m in Sources */ = {isa = PBXBuildFile; fileRef = 6836A2461F0B3D8700E8F462 /* CRCameraOutputBuffReciver.m */; };
-		6836A2541F0B3D8700E8F462 /* RectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6836A2481F0B3D8700E8F462 /* RectManager.m */; };
-		6836A2551F0B3D8700E8F462 /* UIImage+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 6836A24A1F0B3D8700E8F462 /* UIImage+Extend.m */; };
+		6802389E1F0DE6E600EB2A8E /* zocr0.lib in Resources */ = {isa = PBXBuildFile; fileRef = 6802389C1F0DE6E600EB2A8E /* zocr0.lib */; };
+		6802389F1F0DE6E600EB2A8E /* libCameraCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6802389D1F0DE6E600EB2A8E /* libCameraCore.a */; };
+		681620171F0DE03400DA8A8D /* CRBaseCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 68161FF91F0DE03400DA8A8D /* CRBaseCamera.m */; };
+		681620181F0DE03400DA8A8D /* CRCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68161FFC1F0DE03400DA8A8D /* CRCameraController.m */; };
+		681620191F0DE03400DA8A8D /* CRCameraScanObjct.m in Sources */ = {isa = PBXBuildFile; fileRef = 68161FFF1F0DE03400DA8A8D /* CRCameraScanObjct.m */; };
+		6816201A1F0DE03400DA8A8D /* OverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 681620021F0DE03400DA8A8D /* OverlayView.m */; };
+		6816201E1F0DE03400DA8A8D /* BankCardSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 681620101F0DE03400DA8A8D /* BankCardSearch.m */; };
+		6816201F1F0DE03400DA8A8D /* CRCameraOutputBuffReciver.m in Sources */ = {isa = PBXBuildFile; fileRef = 681620121F0DE03400DA8A8D /* CRCameraOutputBuffReciver.m */; };
+		681620201F0DE03400DA8A8D /* RectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 681620141F0DE03400DA8A8D /* RectManager.m */; };
+		681620211F0DE03400DA8A8D /* UIImage+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 681620161F0DE03400DA8A8D /* UIImage+Extend.m */; };
 		69A68F53D6C398864B5AF054 /* Pods_ACamera_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0482ED801429F9809E0E9A85 /* Pods_ACamera_Example.framework */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -72,32 +71,31 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		6836A22B1F0B3D8600E8F462 /* BankCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankCard.h; sourceTree = "<group>"; };
-		6836A22C1F0B3D8600E8F462 /* exbankcard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = exbankcard.h; sourceTree = "<group>"; };
-		6836A22E1F0B3D8700E8F462 /* exbankcardcore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = exbankcardcore.h; sourceTree = "<group>"; };
-		6836A22F1F0B3D8700E8F462 /* libbankcard.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libbankcard.a; sourceTree = "<group>"; };
-		6836A2311F0B3D8700E8F462 /* CRBaseCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRBaseCamera.h; sourceTree = "<group>"; };
-		6836A2321F0B3D8700E8F462 /* CRBaseCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRBaseCamera.m; sourceTree = "<group>"; };
-		6836A2331F0B3D8700E8F462 /* CRBaseCameraControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRBaseCameraControl.h; sourceTree = "<group>"; };
-		6836A2341F0B3D8700E8F462 /* CRCameraDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRCameraDefine.h; sourceTree = "<group>"; };
-		6836A2351F0B3D8700E8F462 /* CRCameraScanObjct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRCameraScanObjct.h; sourceTree = "<group>"; };
-		6836A2361F0B3D8700E8F462 /* CRCameraScanObjct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRCameraScanObjct.m; sourceTree = "<group>"; };
-		6836A2371F0B3D8700E8F462 /* CRCameraController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRCameraController.h; sourceTree = "<group>"; };
-		6836A2381F0B3D8700E8F462 /* CRCameraController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRCameraController.m; sourceTree = "<group>"; };
-		6836A23A1F0B3D8700E8F462 /* OverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayView.h; sourceTree = "<group>"; };
-		6836A23B1F0B3D8700E8F462 /* OverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayView.m; sourceTree = "<group>"; };
-		6836A23D1F0B3D8700E8F462 /* commondef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = commondef.h; sourceTree = "<group>"; };
-		6836A23F1F0B3D8700E8F462 /* zocr0.lib */ = {isa = PBXFileReference; lastKnownFileType = file; path = zocr0.lib; sourceTree = "<group>"; };
-		6836A2401F0B3D8700E8F462 /* excards.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = excards.h; sourceTree = "<group>"; };
-		6836A2411F0B3D8700E8F462 /* libexidcardios.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libexidcardios.a; sourceTree = "<group>"; };
-		6836A2431F0B3D8700E8F462 /* BankCardSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankCardSearch.h; sourceTree = "<group>"; };
-		6836A2441F0B3D8700E8F462 /* BankCardSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankCardSearch.m; sourceTree = "<group>"; };
-		6836A2451F0B3D8700E8F462 /* CRCameraOutputBuffReciver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRCameraOutputBuffReciver.h; sourceTree = "<group>"; };
-		6836A2461F0B3D8700E8F462 /* CRCameraOutputBuffReciver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRCameraOutputBuffReciver.m; sourceTree = "<group>"; };
-		6836A2471F0B3D8700E8F462 /* RectManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RectManager.h; sourceTree = "<group>"; };
-		6836A2481F0B3D8700E8F462 /* RectManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RectManager.m; sourceTree = "<group>"; };
-		6836A2491F0B3D8700E8F462 /* UIImage+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extend.h"; sourceTree = "<group>"; };
-		6836A24A1F0B3D8700E8F462 /* UIImage+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extend.m"; sourceTree = "<group>"; };
+		680238971F0DE6E600EB2A8E /* BankCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankCard.h; sourceTree = "<group>"; };
+		680238981F0DE6E600EB2A8E /* commondef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = commondef.h; sourceTree = "<group>"; };
+		680238991F0DE6E600EB2A8E /* exbankcard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = exbankcard.h; sourceTree = "<group>"; };
+		6802389A1F0DE6E600EB2A8E /* exbankcardcore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = exbankcardcore.h; sourceTree = "<group>"; };
+		6802389B1F0DE6E600EB2A8E /* excards.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = excards.h; sourceTree = "<group>"; };
+		6802389C1F0DE6E600EB2A8E /* zocr0.lib */ = {isa = PBXFileReference; lastKnownFileType = file; path = zocr0.lib; sourceTree = "<group>"; };
+		6802389D1F0DE6E600EB2A8E /* libCameraCore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCameraCore.a; sourceTree = "<group>"; };
+		68161FF81F0DE03400DA8A8D /* CRBaseCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRBaseCamera.h; sourceTree = "<group>"; };
+		68161FF91F0DE03400DA8A8D /* CRBaseCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRBaseCamera.m; sourceTree = "<group>"; };
+		68161FFA1F0DE03400DA8A8D /* CRBaseCameraControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRBaseCameraControl.h; sourceTree = "<group>"; };
+		68161FFB1F0DE03400DA8A8D /* CRCameraController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRCameraController.h; sourceTree = "<group>"; };
+		68161FFC1F0DE03400DA8A8D /* CRCameraController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRCameraController.m; sourceTree = "<group>"; };
+		68161FFD1F0DE03400DA8A8D /* CRCameraDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRCameraDefine.h; sourceTree = "<group>"; };
+		68161FFE1F0DE03400DA8A8D /* CRCameraScanObjct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRCameraScanObjct.h; sourceTree = "<group>"; };
+		68161FFF1F0DE03400DA8A8D /* CRCameraScanObjct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRCameraScanObjct.m; sourceTree = "<group>"; };
+		681620011F0DE03400DA8A8D /* OverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayView.h; sourceTree = "<group>"; };
+		681620021F0DE03400DA8A8D /* OverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayView.m; sourceTree = "<group>"; };
+		6816200F1F0DE03400DA8A8D /* BankCardSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankCardSearch.h; sourceTree = "<group>"; };
+		681620101F0DE03400DA8A8D /* BankCardSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankCardSearch.m; sourceTree = "<group>"; };
+		681620111F0DE03400DA8A8D /* CRCameraOutputBuffReciver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRCameraOutputBuffReciver.h; sourceTree = "<group>"; };
+		681620121F0DE03400DA8A8D /* CRCameraOutputBuffReciver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRCameraOutputBuffReciver.m; sourceTree = "<group>"; };
+		681620131F0DE03400DA8A8D /* RectManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RectManager.h; sourceTree = "<group>"; };
+		681620141F0DE03400DA8A8D /* RectManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RectManager.m; sourceTree = "<group>"; };
+		681620151F0DE03400DA8A8D /* UIImage+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extend.h"; sourceTree = "<group>"; };
+		681620161F0DE03400DA8A8D /* UIImage+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extend.m"; sourceTree = "<group>"; };
 		759A1C32BFD1679ED56F99E7 /* ACamera.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ACamera.podspec; path = ../ACamera.podspec; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CBE5BB07EE341545B3ED1F96 /* Pods-ACamera_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACamera_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ACamera_Tests/Pods-ACamera_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -109,12 +107,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6836A24B1F0B3D8700E8F462 /* libbankcard.a in Frameworks */,
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
+				6802389F1F0DE6E600EB2A8E /* libCameraCore.a in Frameworks */,
 				69A68F53D6C398864B5AF054 /* Pods_ACamera_Example.framework in Frameworks */,
-				6836A2511F0B3D8700E8F462 /* libexidcardios.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,7 +166,7 @@
 		6003F593195388D20070C39A /* Example for ACamera */ = {
 			isa = PBXGroup;
 			children = (
-				6836A2291F0B3D8600E8F462 /* CRCamera */,
+				68161FC01F0DD4D500DA8A8D /* CRCamera */,
 				6003F59C195388D20070C39A /* CRAppDelegate.h */,
 				6003F59D195388D20070C39A /* CRAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -222,91 +219,74 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		6836A2291F0B3D8600E8F462 /* CRCamera */ = {
+		680238951F0DE6E600EB2A8E /* CameraCore */ = {
 			isa = PBXGroup;
 			children = (
-				6836A22A1F0B3D8600E8F462 /* bank_io */,
-				6836A2301F0B3D8700E8F462 /* Core */,
-				6836A2371F0B3D8700E8F462 /* CRCameraController.h */,
-				6836A2381F0B3D8700E8F462 /* CRCameraController.m */,
-				6836A2391F0B3D8700E8F462 /* Dev */,
-				6836A23C1F0B3D8700E8F462 /* libexidcard */,
-				6836A2421F0B3D8700E8F462 /* Private */,
+				680238961F0DE6E600EB2A8E /* include */,
+				6802389D1F0DE6E600EB2A8E /* libCameraCore.a */,
+			);
+			path = CameraCore;
+			sourceTree = "<group>";
+		};
+		680238961F0DE6E600EB2A8E /* include */ = {
+			isa = PBXGroup;
+			children = (
+				680238971F0DE6E600EB2A8E /* BankCard.h */,
+				680238981F0DE6E600EB2A8E /* commondef.h */,
+				680238991F0DE6E600EB2A8E /* exbankcard.h */,
+				6802389A1F0DE6E600EB2A8E /* exbankcardcore.h */,
+				6802389B1F0DE6E600EB2A8E /* excards.h */,
+				6802389C1F0DE6E600EB2A8E /* zocr0.lib */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		68161FC01F0DD4D500DA8A8D /* CRCamera */ = {
+			isa = PBXGroup;
+			children = (
+				680238951F0DE6E600EB2A8E /* CameraCore */,
+				68161FF71F0DE03400DA8A8D /* Core */,
+				681620001F0DE03400DA8A8D /* Dev */,
+				6816200E1F0DE03400DA8A8D /* Private */,
 			);
 			path = CRCamera;
 			sourceTree = "<group>";
 		};
-		6836A22A1F0B3D8600E8F462 /* bank_io */ = {
+		68161FF71F0DE03400DA8A8D /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				6836A22B1F0B3D8600E8F462 /* BankCard.h */,
-				6836A22C1F0B3D8600E8F462 /* exbankcard.h */,
-				6836A22D1F0B3D8600E8F462 /* exbankcardcore */,
-			);
-			path = bank_io;
-			sourceTree = "<group>";
-		};
-		6836A22D1F0B3D8600E8F462 /* exbankcardcore */ = {
-			isa = PBXGroup;
-			children = (
-				6836A22E1F0B3D8700E8F462 /* exbankcardcore.h */,
-				6836A22F1F0B3D8700E8F462 /* libbankcard.a */,
-			);
-			path = exbankcardcore;
-			sourceTree = "<group>";
-		};
-		6836A2301F0B3D8700E8F462 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				6836A2311F0B3D8700E8F462 /* CRBaseCamera.h */,
-				6836A2321F0B3D8700E8F462 /* CRBaseCamera.m */,
-				6836A2331F0B3D8700E8F462 /* CRBaseCameraControl.h */,
-				6836A2341F0B3D8700E8F462 /* CRCameraDefine.h */,
-				6836A2351F0B3D8700E8F462 /* CRCameraScanObjct.h */,
-				6836A2361F0B3D8700E8F462 /* CRCameraScanObjct.m */,
+				68161FF81F0DE03400DA8A8D /* CRBaseCamera.h */,
+				68161FF91F0DE03400DA8A8D /* CRBaseCamera.m */,
+				68161FFA1F0DE03400DA8A8D /* CRBaseCameraControl.h */,
+				68161FFB1F0DE03400DA8A8D /* CRCameraController.h */,
+				68161FFC1F0DE03400DA8A8D /* CRCameraController.m */,
+				68161FFD1F0DE03400DA8A8D /* CRCameraDefine.h */,
+				68161FFE1F0DE03400DA8A8D /* CRCameraScanObjct.h */,
+				68161FFF1F0DE03400DA8A8D /* CRCameraScanObjct.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
 		};
-		6836A2391F0B3D8700E8F462 /* Dev */ = {
+		681620001F0DE03400DA8A8D /* Dev */ = {
 			isa = PBXGroup;
 			children = (
-				6836A23A1F0B3D8700E8F462 /* OverlayView.h */,
-				6836A23B1F0B3D8700E8F462 /* OverlayView.m */,
+				681620011F0DE03400DA8A8D /* OverlayView.h */,
+				681620021F0DE03400DA8A8D /* OverlayView.m */,
 			);
 			path = Dev;
 			sourceTree = "<group>";
 		};
-		6836A23C1F0B3D8700E8F462 /* libexidcard */ = {
+		6816200E1F0DE03400DA8A8D /* Private */ = {
 			isa = PBXGroup;
 			children = (
-				6836A23D1F0B3D8700E8F462 /* commondef.h */,
-				6836A23E1F0B3D8700E8F462 /* dicts */,
-				6836A2401F0B3D8700E8F462 /* excards.h */,
-				6836A2411F0B3D8700E8F462 /* libexidcardios.a */,
-			);
-			path = libexidcard;
-			sourceTree = "<group>";
-		};
-		6836A23E1F0B3D8700E8F462 /* dicts */ = {
-			isa = PBXGroup;
-			children = (
-				6836A23F1F0B3D8700E8F462 /* zocr0.lib */,
-			);
-			path = dicts;
-			sourceTree = "<group>";
-		};
-		6836A2421F0B3D8700E8F462 /* Private */ = {
-			isa = PBXGroup;
-			children = (
-				6836A2431F0B3D8700E8F462 /* BankCardSearch.h */,
-				6836A2441F0B3D8700E8F462 /* BankCardSearch.m */,
-				6836A2451F0B3D8700E8F462 /* CRCameraOutputBuffReciver.h */,
-				6836A2461F0B3D8700E8F462 /* CRCameraOutputBuffReciver.m */,
-				6836A2471F0B3D8700E8F462 /* RectManager.h */,
-				6836A2481F0B3D8700E8F462 /* RectManager.m */,
-				6836A2491F0B3D8700E8F462 /* UIImage+Extend.h */,
-				6836A24A1F0B3D8700E8F462 /* UIImage+Extend.m */,
+				6816200F1F0DE03400DA8A8D /* BankCardSearch.h */,
+				681620101F0DE03400DA8A8D /* BankCardSearch.m */,
+				681620111F0DE03400DA8A8D /* CRCameraOutputBuffReciver.h */,
+				681620121F0DE03400DA8A8D /* CRCameraOutputBuffReciver.m */,
+				681620131F0DE03400DA8A8D /* RectManager.h */,
+				681620141F0DE03400DA8A8D /* RectManager.m */,
+				681620151F0DE03400DA8A8D /* UIImage+Extend.h */,
+				681620161F0DE03400DA8A8D /* UIImage+Extend.m */,
 			);
 			path = Private;
 			sourceTree = "<group>";
@@ -408,9 +388,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6802389E1F0DE6E600EB2A8E /* zocr0.lib in Resources */,
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
-				6836A2501F0B3D8700E8F462 /* zocr0.lib in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -524,16 +504,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* CRAppDelegate.m in Sources */,
-				6836A2551F0B3D8700E8F462 /* UIImage+Extend.m in Sources */,
-				6836A2541F0B3D8700E8F462 /* RectManager.m in Sources */,
-				6836A24E1F0B3D8700E8F462 /* CRCameraController.m in Sources */,
-				6836A2531F0B3D8700E8F462 /* CRCameraOutputBuffReciver.m in Sources */,
-				6836A24F1F0B3D8700E8F462 /* OverlayView.m in Sources */,
-				6836A24D1F0B3D8700E8F462 /* CRCameraScanObjct.m in Sources */,
+				681620211F0DE03400DA8A8D /* UIImage+Extend.m in Sources */,
+				681620201F0DE03400DA8A8D /* RectManager.m in Sources */,
 				6003F5A7195388D20070C39A /* CRViewController.m in Sources */,
-				6836A24C1F0B3D8700E8F462 /* CRBaseCamera.m in Sources */,
+				6816201F1F0DE03400DA8A8D /* CRCameraOutputBuffReciver.m in Sources */,
+				6816201A1F0DE03400DA8A8D /* OverlayView.m in Sources */,
+				681620181F0DE03400DA8A8D /* CRCameraController.m in Sources */,
+				681620191F0DE03400DA8A8D /* CRCameraScanObjct.m in Sources */,
+				681620171F0DE03400DA8A8D /* CRBaseCamera.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
-				6836A2521F0B3D8700E8F462 /* BankCardSearch.m in Sources */,
+				6816201E1F0DE03400DA8A8D /* BankCardSearch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -663,6 +643,15 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/ACamera/CRCamera/bank_io/exbankcardcore",
 					"$(PROJECT_DIR)/ACamera/CRCamera/libexidcard",
+					"$(PROJECT_DIR)/ACamera/CRCamera/mCore/bank_io/exbankcardcore",
+					"$(PROJECT_DIR)/ACamera/CRCamera/mCore/libexidcard",
+					"$(PROJECT_DIR)/ACamera/CRCamera/mCore/BankCard",
+					"$(PROJECT_DIR)/ACamera/CRCamera/mCore/IDCard",
+					"$(PROJECT_DIR)/ACamera/CRCamera/sCore",
+					"$(PROJECT_DIR)/ACamera/CRCamera/core",
+					"$(PROJECT_DIR)/ACamera/CRCamera/Debug-iphoneos",
+					"$(PROJECT_DIR)/ACamera/CRCamera/Release-iphoneos",
+					"$(PROJECT_DIR)/ACamera/CRCamera/CameraCore",
 				);
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
@@ -685,6 +674,15 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/ACamera/CRCamera/bank_io/exbankcardcore",
 					"$(PROJECT_DIR)/ACamera/CRCamera/libexidcard",
+					"$(PROJECT_DIR)/ACamera/CRCamera/mCore/bank_io/exbankcardcore",
+					"$(PROJECT_DIR)/ACamera/CRCamera/mCore/libexidcard",
+					"$(PROJECT_DIR)/ACamera/CRCamera/mCore/BankCard",
+					"$(PROJECT_DIR)/ACamera/CRCamera/mCore/IDCard",
+					"$(PROJECT_DIR)/ACamera/CRCamera/sCore",
+					"$(PROJECT_DIR)/ACamera/CRCamera/core",
+					"$(PROJECT_DIR)/ACamera/CRCamera/Debug-iphoneos",
+					"$(PROJECT_DIR)/ACamera/CRCamera/Release-iphoneos",
+					"$(PROJECT_DIR)/ACamera/CRCamera/CameraCore",
 				);
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
