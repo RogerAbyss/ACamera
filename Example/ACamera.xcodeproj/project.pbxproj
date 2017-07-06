@@ -21,8 +21,8 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
-		6802389E1F0DE6E600EB2A8E /* zocr0.lib in Resources */ = {isa = PBXBuildFile; fileRef = 6802389C1F0DE6E600EB2A8E /* zocr0.lib */; };
-		6802389F1F0DE6E600EB2A8E /* libCameraCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6802389D1F0DE6E600EB2A8E /* libCameraCore.a */; };
+		680238A71F0DE78B00EB2A8E /* zocr0.lib in Resources */ = {isa = PBXBuildFile; fileRef = 680238A51F0DE78B00EB2A8E /* zocr0.lib */; };
+		680238A81F0DE78B00EB2A8E /* libCameraCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 680238A61F0DE78B00EB2A8E /* libCameraCore.a */; };
 		681620171F0DE03400DA8A8D /* CRBaseCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 68161FF91F0DE03400DA8A8D /* CRBaseCamera.m */; };
 		681620181F0DE03400DA8A8D /* CRCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68161FFC1F0DE03400DA8A8D /* CRCameraController.m */; };
 		681620191F0DE03400DA8A8D /* CRCameraScanObjct.m in Sources */ = {isa = PBXBuildFile; fileRef = 68161FFF1F0DE03400DA8A8D /* CRCameraScanObjct.m */; };
@@ -71,13 +71,11 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		680238971F0DE6E600EB2A8E /* BankCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankCard.h; sourceTree = "<group>"; };
-		680238981F0DE6E600EB2A8E /* commondef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = commondef.h; sourceTree = "<group>"; };
-		680238991F0DE6E600EB2A8E /* exbankcard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = exbankcard.h; sourceTree = "<group>"; };
-		6802389A1F0DE6E600EB2A8E /* exbankcardcore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = exbankcardcore.h; sourceTree = "<group>"; };
-		6802389B1F0DE6E600EB2A8E /* excards.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = excards.h; sourceTree = "<group>"; };
-		6802389C1F0DE6E600EB2A8E /* zocr0.lib */ = {isa = PBXFileReference; lastKnownFileType = file; path = zocr0.lib; sourceTree = "<group>"; };
-		6802389D1F0DE6E600EB2A8E /* libCameraCore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCameraCore.a; sourceTree = "<group>"; };
+		680238A21F0DE78B00EB2A8E /* commondef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = commondef.h; sourceTree = "<group>"; };
+		680238A31F0DE78B00EB2A8E /* exbankcard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = exbankcard.h; sourceTree = "<group>"; };
+		680238A41F0DE78B00EB2A8E /* excards.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = excards.h; sourceTree = "<group>"; };
+		680238A51F0DE78B00EB2A8E /* zocr0.lib */ = {isa = PBXFileReference; lastKnownFileType = file; path = zocr0.lib; sourceTree = "<group>"; };
+		680238A61F0DE78B00EB2A8E /* libCameraCore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCameraCore.a; sourceTree = "<group>"; };
 		68161FF81F0DE03400DA8A8D /* CRBaseCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRBaseCamera.h; sourceTree = "<group>"; };
 		68161FF91F0DE03400DA8A8D /* CRBaseCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRBaseCamera.m; sourceTree = "<group>"; };
 		68161FFA1F0DE03400DA8A8D /* CRBaseCameraControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRBaseCameraControl.h; sourceTree = "<group>"; };
@@ -110,7 +108,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				6802389F1F0DE6E600EB2A8E /* libCameraCore.a in Frameworks */,
+				680238A81F0DE78B00EB2A8E /* libCameraCore.a in Frameworks */,
 				69A68F53D6C398864B5AF054 /* Pods_ACamera_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,24 +217,22 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		680238951F0DE6E600EB2A8E /* CameraCore */ = {
+		680238A01F0DE78B00EB2A8E /* CameraCore */ = {
 			isa = PBXGroup;
 			children = (
-				680238961F0DE6E600EB2A8E /* include */,
-				6802389D1F0DE6E600EB2A8E /* libCameraCore.a */,
+				680238A11F0DE78B00EB2A8E /* include */,
+				680238A61F0DE78B00EB2A8E /* libCameraCore.a */,
 			);
 			path = CameraCore;
 			sourceTree = "<group>";
 		};
-		680238961F0DE6E600EB2A8E /* include */ = {
+		680238A11F0DE78B00EB2A8E /* include */ = {
 			isa = PBXGroup;
 			children = (
-				680238971F0DE6E600EB2A8E /* BankCard.h */,
-				680238981F0DE6E600EB2A8E /* commondef.h */,
-				680238991F0DE6E600EB2A8E /* exbankcard.h */,
-				6802389A1F0DE6E600EB2A8E /* exbankcardcore.h */,
-				6802389B1F0DE6E600EB2A8E /* excards.h */,
-				6802389C1F0DE6E600EB2A8E /* zocr0.lib */,
+				680238A21F0DE78B00EB2A8E /* commondef.h */,
+				680238A31F0DE78B00EB2A8E /* exbankcard.h */,
+				680238A41F0DE78B00EB2A8E /* excards.h */,
+				680238A51F0DE78B00EB2A8E /* zocr0.lib */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -244,7 +240,7 @@
 		68161FC01F0DD4D500DA8A8D /* CRCamera */ = {
 			isa = PBXGroup;
 			children = (
-				680238951F0DE6E600EB2A8E /* CameraCore */,
+				680238A01F0DE78B00EB2A8E /* CameraCore */,
 				68161FF71F0DE03400DA8A8D /* Core */,
 				681620001F0DE03400DA8A8D /* Dev */,
 				6816200E1F0DE03400DA8A8D /* Private */,
@@ -388,7 +384,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6802389E1F0DE6E600EB2A8E /* zocr0.lib in Resources */,
+				680238A71F0DE78B00EB2A8E /* zocr0.lib in Resources */,
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
