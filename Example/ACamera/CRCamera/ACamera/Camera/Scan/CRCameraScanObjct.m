@@ -30,6 +30,52 @@
     return code;
 }
 
+- (BOOL)success
+{
+    switch (self.style)
+    {
+        case CRCameraStyleUnknow:
+        {
+            return NO;
+        }
+            break;
+        case CRCameraStyleCode:
+        {
+            return (_codeString&&_codeString.length>0);
+        }
+            break;
+        case CRCameraStyleIDCard:
+        {
+            if (_code !=nil && _name!=nil && _gender!=nil && _nation!=nil && _address!=nil)
+            {
+                if (_code.length>0 && _name.length >0 && _gender.length>0 && _nation.length>0 && _address.length>0)
+                {
+                    return YES;
+                }
+            }
+            else if (_issue !=nil && _valid!=nil)
+            {
+                if (_issue.length>0 && _valid.length >0)
+                {
+                    return YES;
+                }
+            }
+            
+            return NO;
+        }
+            break;
+        case CRCameraStyleBankCard:
+        {
+            return (_bankNumber&&_bankName);
+        }
+            break;
+        default:
+            break;
+    }
+ 
+    return NO;
+}
+
 - (NSString *)description
 {
     NSString* des = @"";
@@ -64,25 +110,6 @@
     }
     
     return des;
-}
-
-- (BOOL)isOK
-{
-    if (_code !=nil && _name!=nil && _gender!=nil && _nation!=nil && _address!=nil)
-    {
-        if (_code.length>0 && _name.length >0 && _gender.length>0 && _nation.length>0 && _address.length>0)
-        {
-            return YES;
-        }
-    }
-    else if (_issue !=nil && _valid!=nil)
-    {
-        if (_issue.length>0 && _valid.length >0)
-        {
-            return YES;
-        }
-    }
-    return NO;
 }
 
 

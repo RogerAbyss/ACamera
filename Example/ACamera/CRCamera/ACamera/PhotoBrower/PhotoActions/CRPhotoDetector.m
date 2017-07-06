@@ -52,6 +52,7 @@
         int i = 0;
         
         idInfo = [CRCameraScanObjct new];
+        idInfo.style = CRCameraStyleIDCard;
         ctype = pResult[i++];
         idInfo.type = ctype;
         while(i < ret){
@@ -80,26 +81,26 @@
             }
         }
         
-        static CRCameraScanObjct *lastIdInfo = nil;
+//        static CRCameraScanObjct *lastIdInfo = nil;
+//        
+//        if (camera && camera.style == 3)
+//        {
+//            if (lastIdInfo == nil)
+//            {
+//                lastIdInfo = idInfo;
+//                idInfo = nil;
+//            }
+//            //            else
+//            //            {
+//            //                if (![lastIdInfo isEqual:idInfo])
+//            //                {
+//            //                    lastIdInfo = idInfo;
+//            //                    idInfo = nil;
+//            //                }
+//            //            }
+//        }
         
-        if (camera && camera.style == 3)
-        {
-            if (lastIdInfo == nil)
-            {
-                lastIdInfo = idInfo;
-                idInfo = nil;
-            }
-            //            else
-            //            {
-            //                if (![lastIdInfo isEqual:idInfo])
-            //                {
-            //                    lastIdInfo = idInfo;
-            //                    idInfo = nil;
-            //                }
-            //            }
-        }
-        
-        if ([lastIdInfo isOK])
+        if ([idInfo success])
         {
             CGSize size = CGSizeMake(width, height);
             CGRect effectRect = [RectManager getEffectImageRect:size];
@@ -112,12 +113,12 @@
                 AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
             });
             
-            return lastIdInfo;
+            return idInfo;
         }
-        else
-        {
-            idInfo = nil;
-        }
+//        else
+//        {
+//            idInfo = nil;
+//        }
     }
     
 //    if (idInfo != nil)
@@ -187,6 +188,7 @@
                 AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
             });
             
+            model.style = CRCameraStyleBankCard;
             return model;
         }
     }
@@ -228,6 +230,7 @@
                         AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
                     });
                     
+                    model.style = CRCameraStyleCode;
                     return model;
                 }
     

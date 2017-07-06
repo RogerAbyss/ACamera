@@ -292,6 +292,7 @@
 
         CRCameraScanObjct *model = [CRCameraScanObjct new];
         model.codeString = obj.stringValue;
+        model.style = CRCameraStyleCode;
         
         self.greb(model);
     }

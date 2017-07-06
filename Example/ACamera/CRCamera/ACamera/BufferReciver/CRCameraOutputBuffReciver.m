@@ -65,7 +65,7 @@
 {
     CRCameraScanObjct* obj = [CRPhotoDetector getBankCardFrom:imageBuffer camera:self.camera];
     
-    if (obj && self.camera.greb)
+    if (obj.success && self.camera.greb)
     {
         self.camera.greb(obj);
     }
@@ -78,7 +78,7 @@
 {
     CRCameraScanObjct* obj = [CRPhotoDetector getIDCardFrom:imageBuffer camera:self.camera];
     
-    if (obj && self.camera.greb)
+    if (obj.success && self.camera.greb)
     {
         self.camera.greb(obj);
     }

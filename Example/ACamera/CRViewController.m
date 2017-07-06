@@ -27,9 +27,9 @@
                                                               style:CRCameraStyleCode
                                                               cover:[ScanOverlay cover]
                                                                greb:^(CRCameraScanObjct* info){
-                                                                   
-                                                                   NSLog(@"%@",info);}];
-        [_controller dismiss];
+                                                                   NSLog(@"%@",info);
+                                                                   [_controller dismiss];
+                                                               }];
     });
     
 }

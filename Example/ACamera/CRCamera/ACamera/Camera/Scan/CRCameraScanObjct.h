@@ -12,7 +12,9 @@
 
 @interface CRCameraScanObjct : NSObject
 
-@property (nonatomic, assign, readonly) CRCameraStyle style;
+@property (nonatomic, assign) CRCameraStyle style;
+@property (nonatomic, assign, readonly) BOOL success;
+
 - (NSString *)description;
 
 @property (copy, nonatomic) NSString* codeString;
@@ -35,5 +37,5 @@
 
 @property (nonatomic, strong) UIImage *bankImage;   //银行卡照片
 
--(BOOL)isOK;
+
 @end
