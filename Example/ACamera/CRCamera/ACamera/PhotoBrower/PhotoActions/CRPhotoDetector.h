@@ -15,5 +15,6 @@
 + (CRCameraScanObjct *)getIDCardFrom:(CVImageBufferRef)imageBuffer camera:(CRBaseCamera *)camera;
 + (CRCameraScanObjct *)getBankCardFrom:(CVImageBufferRef)imageBuffer camera:(CRBaseCamera *)camera;
 + (CRCameraScanObjct *)getQRCodeFrom:(CVImageBufferRef)imageBuffer camera:(CRBaseCamera *)camera;
++ (CRCameraScanObjct *)getStringFrom:(CVImageBufferRef)imageBuffer camera:(CRBaseCamera *)camera;
 
 @end

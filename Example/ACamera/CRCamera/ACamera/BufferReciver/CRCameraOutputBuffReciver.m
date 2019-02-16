@@ -50,6 +50,10 @@
                     // CIDetector锁死buffer造成内存无法释放, 系统问题
                     // 转用AV框架处理二维码相关
                 }
+                case CRCameraDetetorTypeString:
+                {
+                    [self parseStringImageBuffer:imageBuffer];
+                }
                 default:
                     break;
             }
@@ -87,4 +91,16 @@
     self.camera.processing = NO;
 }
 
+- (void)parseStringImageBuffer:(CVImageBufferRef)imageBuffer
+{
+    CRCameraScanObjct* obj = [CRPhotoDetector getStringFrom:imageBuffer camera:self.camera];
+    
+    if (obj.success && self.camera.greb)
+    {
+        self.camera.greb(obj);
+    }
+    
+    CVPixelBufferUnlockBaseAddress(imageBuffer, 0);
+    self.camera.processing = NO;
+}
 @end

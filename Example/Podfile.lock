@@ -1,23 +1,23 @@
 PODS:
   - ACamera (0.1.0)
-  - FBSnapshotTestCase (2.1.4):
-    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
-  - FBSnapshotTestCase/Core (2.1.4)
-  - FBSnapshotTestCase/SwiftSupport (2.1.4):
-    - FBSnapshotTestCase/Core
+  - TesseractOCRiOS (5.0.1)
 
 DEPENDENCIES:
   - ACamera (from `../`)
-  - FBSnapshotTestCase
+  - TesseractOCRiOS (~> 5.0.1)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - TesseractOCRiOS
 
 EXTERNAL SOURCES:
   ACamera:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ACamera: d3f659e03fca08380adb53dce40966246174b616
-  FBSnapshotTestCase: '094f9f314decbabe373b87cc339bea235a63e07a'
+  ACamera: b9307b0c4bf9f9945649be499e3b1c4e60d3c5cf
+  TesseractOCRiOS: 2c189465f86abb030d0c5141c90da9705b647854
 
-PODFILE CHECKSUM: eb4605f646e23d00c2aa72305a86c233ca869850
+PODFILE CHECKSUM: 6b7dace3c72c40740c5bfc349e7f63982a9ab66f
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.6.0.beta.1

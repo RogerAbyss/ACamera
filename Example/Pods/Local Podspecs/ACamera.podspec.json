@@ -1,9 +1,9 @@
 {
   "name": "ACamera",
   "version": "0.1.0",
-  "summary": "A short description of ACamera.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/RogerAbyss/ACamera",
+  "summary": "ACamera",
+  "description": "ACamera",
+  "homepage": "http://git.oschina.net/abyssroger/acamera",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,7 +12,7 @@
     "RogerAbyss": "roger_ren@qq.com"
   },
   "source": {
-    "git": "https://github.com/RogerAbyss/ACamera.git",
+    "git": "git@git.oschina.net:abyssroger/acamera.git",
     "tag": "0.1.0"
   },
   "platforms": {

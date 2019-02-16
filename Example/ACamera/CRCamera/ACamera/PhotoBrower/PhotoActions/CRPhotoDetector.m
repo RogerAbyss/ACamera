@@ -15,11 +15,14 @@
 #import "UIImage+Extend.h"
 #import "BankCardSearch.h"
 #import "CRCameraScanObjct.h"
+#import <TesseractOCR/TesseractOCR.h>
 
 @implementation CRPhotoDetector
 
 + (CRCameraScanObjct *)getIDCardFrom:(CVImageBufferRef)imageBuffer camera:(CRBaseCamera *)camera
 {
+#if TARGET_IPHONE_SIMULATOR
+#else
     CRCameraScanObjct *idInfo = nil;
     
     size_t width= CVPixelBufferGetWidth(imageBuffer);
@@ -136,12 +139,14 @@
 //        
 //        return idInfo;
 //    }
-
+#endif
     return nil;
 }
 
 + (CRCameraScanObjct *)getBankCardFrom:(CVImageBufferRef)imageBuffer camera:(CRBaseCamera *)camera
 {
+#if TARGET_IPHONE_SIMULATOR
+#else
     size_t width_t= CVPixelBufferGetWidth(imageBuffer);
     size_t height_t = CVPixelBufferGetHeight(imageBuffer);
     CVPlanarPixelBufferInfo_YCbCrBiPlanar *planar = CVPixelBufferGetBaseAddress(imageBuffer);
@@ -192,7 +197,7 @@
             return model;
         }
     }
-    
+#endif
     return nil;
 }
 
@@ -240,7 +245,37 @@
         }
     
     CVPixelBufferUnlockBaseAddress(imageBuffer, 0);
+
+    return nil;
+}
+
++ (CRCameraScanObjct *)getStringFrom:(CVImageBufferRef)imageBuffer camera:(CRBaseCamera *)camera
+{
+    G8RecognitionOperation* recongnize = [[G8RecognitionOperation alloc] initWithLanguage:@"eng"];
+
+    recongnize.tesseract.engineMode = G8OCREngineModeTesseractOnly;
+    recongnize.tesseract.pageSegmentationMode = G8PageSegmentationModeAuto;
+
+    CIImage *ciImage = [CIImage imageWithCVPixelBuffer:imageBuffer];
+    CIContext *temporaryContext = [CIContext contextWithOptions:nil];
+    CGImageRef videoImage = [temporaryContext
+                             createCGImage:ciImage
+                             fromRect:CGRectMake(0, 0,
+                                                 CVPixelBufferGetWidth(imageBuffer),
+                                                 CVPixelBufferGetHeight(imageBuffer))];
     
+    UIImage *image = [[UIImage alloc] initWithCGImage:videoImage];
+    CGImageRelease(videoImage);
+
+    recongnize.tesseract.image = image;
+
+    recongnize.recognitionCompleteBlock = ^(G8Tesseract *tesseract) {
+        NSLog(@"%@",tesseract.recognizedText);
+    };
+    
+    
+    [recongnize start];
+
     return nil;
 }
 

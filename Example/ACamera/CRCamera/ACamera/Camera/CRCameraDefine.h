@@ -15,6 +15,7 @@ typedef NS_ENUM(NSInteger, CRCameraDetetorType)
     CRCameraDetetorTypeUnknow = -1,
     CRCameraDetetorTypeNormal = 0,
     
+    CRCameraDetetorTypeString,
     CRCameraDetetorTypeCode,
     
     CRCameraDetetorTypeBankCard,

@@ -33,6 +33,7 @@
 		680238EB1F0E0E5A00EB2A8E /* CRCameraScanObjct.m in Sources */ = {isa = PBXBuildFile; fileRef = 680238E31F0E0E5A00EB2A8E /* CRCameraScanObjct.m */; };
 		680238EC1F0E0E5A00EB2A8E /* CRCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 680238E51F0E0E5A00EB2A8E /* CRCameraController.m */; };
 		680238F11F0E314C00EB2A8E /* CRPhotoDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 680238F01F0E314C00EB2A8E /* CRPhotoDetector.m */; };
+		681B5AA521CA1ADC008AF209 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 681B5AA421CA1ADC008AF209 /* tessdata */; };
 		69A68F53D6C398864B5AF054 /* Pods_ACamera_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0482ED801429F9809E0E9A85 /* Pods_ACamera_Example.framework */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -99,7 +100,8 @@
 		680238E51F0E0E5A00EB2A8E /* CRCameraController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRCameraController.m; sourceTree = "<group>"; };
 		680238EF1F0E314C00EB2A8E /* CRPhotoDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRPhotoDetector.h; sourceTree = "<group>"; };
 		680238F01F0E314C00EB2A8E /* CRPhotoDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRPhotoDetector.m; sourceTree = "<group>"; };
-		759A1C32BFD1679ED56F99E7 /* ACamera.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ACamera.podspec; path = ../ACamera.podspec; sourceTree = "<group>"; };
+		681B5AA421CA1ADC008AF209 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tessdata; path = ../../../../../Desktop/tessdata; sourceTree = "<group>"; };
+		759A1C32BFD1679ED56F99E7 /* ACamera.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ACamera.podspec; path = ../ACamera.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CBE5BB07EE341545B3ED1F96 /* Pods-ACamera_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACamera_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ACamera_Tests/Pods-ACamera_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		E64272129A92976DAABA6F5A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 		6003F593195388D20070C39A /* Example for ACamera */ = {
 			isa = PBXGroup;
 			children = (
+				681B5AA421CA1ADC008AF209 /* tessdata */,
 				68161FC01F0DD4D500DA8A8D /* CRCamera */,
 				6003F59C195388D20070C39A /* CRAppDelegate.h */,
 				6003F59D195388D20070C39A /* CRAppDelegate.m */,
@@ -358,7 +361,6 @@
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
 				96AF4427C21C92FB94197184 /* [CP] Embed Pods Frameworks */,
-				A6D68D8F5B011D7E282473A9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -377,8 +379,6 @@
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
-				0EBDBA1560AE7F5D96D14989 /* [CP] Embed Pods Frameworks */,
-				E5282D8652ED63D8EEA82C5C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -437,6 +437,7 @@
 				680238AA1F0DEA2400EB2A8E /* Launch Screen.storyboard in Resources */,
 				680238CE1F0DED6C00EB2A8E /* zocr0.lib in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+				681B5AA521CA1ADC008AF209 /* tessdata in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,13 +458,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ACamera_Example-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		0CAC1FE1982B90D7E3A7CD9A /* [CP] Check Pods Manifest.lock */ = {
@@ -472,28 +476,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ACamera_Tests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		0EBDBA1560AE7F5D96D14989 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ACamera_Tests/Pods-ACamera_Tests-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		96AF4427C21C92FB94197184 /* [CP] Embed Pods Frameworks */ = {
@@ -502,43 +494,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ACamera_Example/Pods-ACamera_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ACamera/ACamera.framework",
+				"${BUILT_PRODUCTS_DIR}/TesseractOCRiOS/TesseractOCR.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ACamera.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TesseractOCR.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ACamera_Example/Pods-ACamera_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A6D68D8F5B011D7E282473A9 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ACamera_Example/Pods-ACamera_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E5282D8652ED63D8EEA82C5C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ACamera_Tests/Pods-ACamera_Tests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ACamera_Example/Pods-ACamera_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -685,6 +652,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ACamera/ACamera-Prefix.pch";
 				INFOPLIST_FILE = "ACamera/ACamera-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ACamera/CRCamera/bank_io/exbankcardcore",
@@ -717,6 +685,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ACamera/ACamera-Prefix.pch";
 				INFOPLIST_FILE = "ACamera/ACamera-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ACamera/CRCamera/bank_io/exbankcardcore",

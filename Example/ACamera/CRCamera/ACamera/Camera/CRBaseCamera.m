@@ -229,12 +229,15 @@
 
 - (void)configIDScan
 {
+#if TARGET_IPHONE_SIMULATOR
+#else
     const char *thePath = [[[NSBundle mainBundle] resourcePath] UTF8String];
     int ret = EXCARDS_Init(thePath);
     if (ret != 0)
     {
         NSLog(@"身份证扫描初始化失败：ret=%d", ret);
     }
+#endif
 }
 
 #pragma mark - Delegate
